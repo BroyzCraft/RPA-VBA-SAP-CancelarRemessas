@@ -34,6 +34,7 @@ session.findById("wnd[0]/tbar[0]/okcd").Text = "/nVL03N"
 session.findById("wnd[0]").sendVKey 0
 Do While x < tot
 session.findById("wnd[0]/usr/ctxtLIKP-VBELN").Text = Range("A" & x + 1).Value
+On Error Resume Next
 session.findById("wnd[0]").sendVKey 0
 session.findById("wnd[0]/tbar[1]/btn[25]").press
 session.findById("wnd[0]/tbar[1]/btn[14]").press

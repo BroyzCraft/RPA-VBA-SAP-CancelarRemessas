@@ -2,18 +2,15 @@ Attribute VB_Name = "LoginSAP"
 Sub SAP_Logon()
     
     Dim usuario, senha
-    'usuario = UCase(InputBox("Digite seu login SAP: "))
-    'senha = InputBox("Digite sua senha SAP: ")
-    'debug
-    usuario = "BOMARQUES"
-    senha = "321654987Leo!"
+    usuario = UCase(InputBox("Digite seu login SAP: "))
+    senha = InputBox("Digite sua senha SAP: ")
     
     Dim SapGui, Applic, connection, session, WSHShell
     
-    'Abre o Sap instalado na sua máquina
+    'Abre o Sap instalado na sua mï¿½quina
     Shell "C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe", vbNormalFocus
     
-    'Inicia a variável com o objeto SAP
+    'Inicia a variï¿½vel com o objeto SAP
     Set WSHShell = CreateObject("WScript.Shell")
     Do Until WSHShell.AppActivate("SAP Logon ")
         Application.Wait Now + TimeValue("0:00:01")
